@@ -6,7 +6,6 @@ import { CardScreenComponent } from './landing-screen/components/card-screen/car
 import { GalleryScreenComponent } from './landing-screen/components/gallery-screen/gallery-screen.component';
 import { ProfileScreenComponent } from './landing-screen/components/profile-screen/profile-screen.component';
 import { RankingScreenComponent } from './landing-screen/components/ranking-screen/ranking-screen.component';
-import { LandingScreenComponent } from './landing-screen/landing-screen.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 
 const routes: Routes = [
@@ -17,10 +16,6 @@ const routes: Routes = [
   { 
     path: 'login', 
     component: LoginScreenComponent 
-  },
-  { 
-    path: 'main-menu', 
-    component: LandingScreenComponent 
   },
   { 
     path: 'gallery', 

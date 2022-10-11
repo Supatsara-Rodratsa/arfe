@@ -1,6 +1,0 @@
-.landing-container {
-    padding: 0px 20px;
-    height: calc(100% - 200px);
-    overflow-y: scroll;
-    transform: translateZ(0);
-}

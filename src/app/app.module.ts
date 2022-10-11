@@ -11,7 +11,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 import { MenuItemComponent } from './shared/components/menu-item/menu-item.component';
 import { MenuDetailComponent } from './shared/components/menu-detail/menu-detail.component';
-import { LandingScreenComponent } from './landing-screen/landing-screen.component';
 import { AllMenuScreenComponent } from './landing-screen/components/all-menu-screen/all-menu-screen.component';
 import { GalleryScreenComponent } from './landing-screen/components/gallery-screen/gallery-screen.component';
 import { CardScreenComponent } from './landing-screen/components/card-screen/card-screen.component';
@@ -26,12 +25,12 @@ import { ProfileScreenComponent } from './landing-screen/components/profile-scre
     OnboardingScreenComponent,
     LoginScreenComponent,
     MenuDetailComponent,
-    LandingScreenComponent,
     AllMenuScreenComponent,
     GalleryScreenComponent,
     CardScreenComponent,
     RankingScreenComponent,
-    ProfileScreenComponent
+    ProfileScreenComponent,
+    MenuItemComponent,
   ],
   imports: [
     BrowserModule,
