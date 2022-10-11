@@ -1,0 +1,8 @@
+<div class="flex-col space-between">
+    <app-nav-bar [mainColor]="selectedMenu?.color"></app-nav-bar>
+    <div class="landing-container pad-0">
+
+    </div> 
+    <app-footer [currentItem]="'menu'" (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
+</div>
+

@@ -16,6 +16,7 @@ import { GalleryScreenComponent } from './landing-screen/components/gallery-scre
 import { CardScreenComponent } from './landing-screen/components/card-screen/card-screen.component';
 import { RankingScreenComponent } from './landing-screen/components/ranking-screen/ranking-screen.component';
 import { ProfileScreenComponent } from './landing-screen/components/profile-screen/profile-screen.component';
+import { MenuViewScreenComponent } from './landing-screen/components/menu-view-screen/menu-view-screen.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ProfileScreenComponent } from './landing-screen/components/profile-scre
     RankingScreenComponent,
     ProfileScreenComponent,
     MenuItemComponent,
+    MenuViewScreenComponent,
   ],
   imports: [
     BrowserModule,

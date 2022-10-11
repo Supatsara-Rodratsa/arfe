@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { UtilitiesService } from 'src/app/shared/utility.service';
 import { breakfast, coldDrink, hotCoffee, hotDrink, iceCoffee, Menu, sweetCorner } from './all-menu.interface';
 
 @Component({
@@ -18,8 +18,8 @@ export class AllMenuScreenComponent implements OnInit {
   public color: string = '#CC8AFF';
 
   constructor(
-    private router: Router
-  ) {}
+    public utilitiesService: UtilitiesService,
+  ) { }
 
 
   ngOnInit(): void {
@@ -55,23 +55,4 @@ export class AllMenuScreenComponent implements OnInit {
       this.color = '#75D6D8';
     }
   }
-
-  selectedIcon(event: string) {
-    if (event == 'menu') {
-      this.router.navigate(['menu']);
-    } 
-
-    if (event == 'gallery') {
-      this.router.navigate(['gallery']);
-    } 
-
-    if (event == 'card') {
-      this.router.navigate(['card']);
-    } 
-
-    if (event == 'ranking') {
-      this.router.navigate(['ranking']);
-    } 
-  }
-
 }

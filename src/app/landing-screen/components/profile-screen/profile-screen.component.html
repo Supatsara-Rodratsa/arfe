@@ -2,5 +2,5 @@
     <app-nav-bar [mainColor]="'#0D99FF'"></app-nav-bar>
     <div class="landing-container">
     </div> 
-    <app-footer (selectedItem)="selectedIcon($event)"></app-footer>
+    <app-footer (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
 </div>

@@ -3,5 +3,5 @@
     <div class="landing-container">
         <app-welcome-header [isRanking]="true"></app-welcome-header>
     </div> 
-    <app-footer [currentItem]="'ranking'" (selectedItem)="selectedIcon($event)"></app-footer>
+    <app-footer [currentItem]="'ranking'" (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
 </div>

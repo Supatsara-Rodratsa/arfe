@@ -25,5 +25,5 @@
             <img class="gallery-img"  src="assets/images/art4.jpg"/>
         </div>
     </div> 
-    <app-footer [currentItem]="'gallery'" (selectedItem)="selectedIcon($event)"></app-footer>
+    <app-footer [currentItem]="'gallery'" (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
 </div>

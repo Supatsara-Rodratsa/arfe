@@ -32,6 +32,6 @@
             </div>
         </div>
     </div> 
-    <app-footer [currentItem]="'menu'" (selectedItem)="selectedIcon($event)"></app-footer>
+    <app-footer [currentItem]="'menu'" (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
 </div>
 

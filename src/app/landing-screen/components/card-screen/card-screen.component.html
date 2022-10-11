@@ -3,5 +3,5 @@
     <div class="landing-container">
         <app-welcome-header [isCard]="true"></app-welcome-header>
     </div> 
-    <app-footer [currentItem]="'card'" (selectedItem)="selectedIcon($event)"></app-footer>
+    <app-footer [currentItem]="'card'" (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
 </div>
