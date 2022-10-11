@@ -1,5 +1,5 @@
 <div class="flex-col space-between">
-    <app-nav-bar></app-nav-bar>
+    <app-nav-bar [mainColor]="color"></app-nav-bar>
     <div class="landing-container pad-0">
         <div class="flex-col">
             <div class="menu-layout">
@@ -32,6 +32,6 @@
             </div>
         </div>
     </div> 
-    <app-footer (selectedItem)="selectedIcon($event)"></app-footer>
+    <app-footer [currentItem]="'menu'" (selectedItem)="selectedIcon($event)"></app-footer>
 </div>
 

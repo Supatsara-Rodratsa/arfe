@@ -1,7 +1,7 @@
 <div class="flex-col space-between">
-    <app-nav-bar></app-nav-bar>
+    <app-nav-bar [mainColor]="'#75D6D8'"></app-nav-bar>
     <div class="landing-container">
         <app-welcome-header [isRanking]="true"></app-welcome-header>
     </div> 
-    <app-footer (selectedItem)="selectedIcon($event)"></app-footer>
+    <app-footer [currentItem]="'ranking'" (selectedItem)="selectedIcon($event)"></app-footer>
 </div>

@@ -15,6 +15,7 @@ export class AllMenuScreenComponent implements OnInit {
   public isSelectedCoffee: boolean = true;
   public isSelectedDrink: boolean = false;
   public isSelectedSnack: boolean = false;
+  public color: string = '#CC8AFF';
 
   constructor(
     private router: Router
@@ -37,18 +38,21 @@ export class AllMenuScreenComponent implements OnInit {
       this.isSelectedCoffee = true;
       this.isSelectedDrink = false;
       this.isSelectedSnack = false;
+      this.color = '#CC8AFF';
     }
 
     if (items == 'Drinks') {
       this.isSelectedCoffee = false;
       this.isSelectedDrink = true;
       this.isSelectedSnack = false;
+      this.color = '#FF8A9D';
     }
 
     if (items == 'Snacks') {
       this.isSelectedCoffee = false;
       this.isSelectedDrink = false;
       this.isSelectedSnack = true;
+      this.color = '#75D6D8';
     }
   }
 

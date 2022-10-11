@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  @Input() currentItem = ''; 
   @Output() selectedItem = new EventEmitter<string>();
 
   constructor() { }
@@ -15,6 +16,7 @@ export class FooterComponent implements OnInit {
   }
 
   onClickedItem(item: string) {
+    this.currentItem = item;
     this.selectedItem.emit(item);
   }
 

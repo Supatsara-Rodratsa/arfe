@@ -1,26 +1,26 @@
 <div class="gird-footer-container">
     <div class="flex-col align-center pad-20" (click)="onClickedItem('gallery')">
         <div class="icon-height flex align-center">
-            <div id="gallery-icon" class="icon-layout"></div>
+            <div id="gallery-icon" class="icon-layout" [style.filter]="currentItem == 'gallery' ? 'brightness(0)' : 'none'"></div>
         </div>
-        <div class="font-secondary-small semi-bold">Gallery</div>
+        <div class="font-secondary-small semi-bold" [ngClass]="currentItem == 'gallery' ? 'black-color' : 'dark-gray-color'">Gallery</div>
     </div>
     <div class="flex-col align-center pad-20" (click)="onClickedItem('menu')">
         <div class="icon-height flex align-center">
-            <div id="menu-icon" class="icon-layout"></div>
+            <div id="menu-icon" class="icon-layout" [style.filter]="currentItem == 'menu' ? 'brightness(0)' : 'none'"></div>
         </div>
-        <div class="font-secondary-small semi-bold">Menu</div>
+        <div class="font-secondary-small semi-bold" [ngClass]="currentItem == 'menu' ? 'black-color' : 'dark-gray-color'">Menu</div>
     </div>
     <div class="flex-col align-center pad-20" (click)="onClickedItem('card')">
         <div class="icon-height flex align-center">
-            <div id="card-icon" class="icon-layout"></div>
+            <div id="card-icon" class="icon-layout" [style.filter]="currentItem == 'card' ? 'brightness(0)' : 'none'"></div>
         </div>
-        <div class="font-secondary-small semi-bold">Card</div>
+        <div class="font-secondary-small semi-bold" [ngClass]="currentItem == 'card' ? 'black-color' : 'dark-gray-color'">Card</div>
     </div>
     <div class="flex-col align-center pad-20" (click)="onClickedItem('ranking')">
         <div class="icon-height flex align-center">
-            <div id="ranking-icon" class="icon-layout"></div>
+            <div id="ranking-icon" class="icon-layout" [style.filter]="currentItem == 'ranking' ? 'brightness(0)' : 'none'"></div>
         </div>
-        <div class="font-secondary-small semi-bold">Ranking</div>
+        <div class="font-secondary-small semi-bold" [ngClass]="currentItem == 'ranking' ? 'black-color' : 'dark-gray-color'">Ranking</div>
     </div>
 </div>

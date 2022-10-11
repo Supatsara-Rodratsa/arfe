@@ -1,5 +1,5 @@
 <div class="flex-col space-between">
-    <app-nav-bar></app-nav-bar>
+    <app-nav-bar [mainColor]="'#FFCD29'"></app-nav-bar>
     <div class="landing-container">
         <app-welcome-header [isGallery]="true"></app-welcome-header>
         <div class="gallery-container">
@@ -25,5 +25,5 @@
             <img class="gallery-img"  src="assets/images/art4.jpg"/>
         </div>
     </div> 
-    <app-footer (selectedItem)="selectedIcon($event)"></app-footer>
+    <app-footer [currentItem]="'gallery'" (selectedItem)="selectedIcon($event)"></app-footer>
 </div>

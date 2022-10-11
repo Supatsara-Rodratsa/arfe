@@ -1,7 +1,7 @@
 <div class="flex-col space-between">
-    <app-nav-bar></app-nav-bar>
+    <app-nav-bar [mainColor]="'#FF8A9D'"></app-nav-bar>
     <div class="landing-container">
         <app-welcome-header [isCard]="true"></app-welcome-header>
     </div> 
-    <app-footer (selectedItem)="selectedIcon($event)"></app-footer>
+    <app-footer [currentItem]="'card'" (selectedItem)="selectedIcon($event)"></app-footer>
 </div>
