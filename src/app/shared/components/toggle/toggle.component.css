@@ -1,0 +1,17 @@
+.toggle-container {
+    padding: 15px;
+    background: white;
+    box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+}
+
+.gird-container {
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+ }
+
+.toggler-bg {
+    background-color: var(--purple);
+}

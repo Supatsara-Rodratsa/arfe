@@ -1,0 +1,35 @@
+<div class="flex-col space-between">
+    <app-nav-bar></app-nav-bar>
+    <div class="landing-container">
+        <div class="flex-col">
+            <app-welcome-header [isMenu]="true"></app-welcome-header>
+            <app-toggle (selectedItem)="selectedCategories($event)"></app-toggle>
+            <div *ngIf="isSelectedCoffee">
+                <div *ngFor="let coffee of coffeeHashMap | keyvalue; let i = index">
+                    <div  *ngFor="let item of coffee.value; let j = index">
+                        <div class="font-mid-header bold" [style.color]="item.color" *ngIf="j==0">{{coffee.key}}</div>
+                        <app-menu-item [name]="item.name" [quantity]="item.quantity" [ingredient]="item.ingredient" [price]="item.price"></app-menu-item>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="isSelectedDrink">
+                <div *ngFor="let coffee of drinkHashMap | keyvalue; let i = index">
+                    <div  *ngFor="let item of coffee.value; let j = index">
+                        <div class="font-mid-header bold" [style.color]="item.color" *ngIf="j==0">{{coffee.key}}</div>
+                        <app-menu-item [name]="item.name" [quantity]="item.quantity" [ingredient]="item.ingredient" [price]="item.price"></app-menu-item>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="isSelectedSnack">
+                <div *ngFor="let coffee of snackHashMap | keyvalue; let i = index">
+                    <div  *ngFor="let item of coffee.value; let j = index">
+                        <div class="font-mid-header bold" [style.color]="item.color" *ngIf="j==0">{{coffee.key}}</div>
+                        <app-menu-item [name]="item.name" [quantity]="item.quantity" [ingredient]="item.ingredient" [price]="item.price"></app-menu-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <app-footer (selectedItem)="selectedIcon($event)"></app-footer>
+</div>
+

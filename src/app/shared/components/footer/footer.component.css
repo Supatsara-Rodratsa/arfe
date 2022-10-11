@@ -1,0 +1,44 @@
+.gird-footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    box-shadow: inset 0px 0.5px 0px #E2E3E4;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: white;
+ }
+
+#gallery-icon {
+    background: url(src/assets/images/gallery.svg) no-repeat center;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+#card-icon {
+    background: url(src/assets/images/card.svg) no-repeat center;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+#menu-icon {
+    background: url(src/assets/images/menu.svg) no-repeat center;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+#ranking-icon {
+    background: url(src/assets/images/ranking.svg) no-repeat center;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+.icon-layout {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-height {
+    height: 40px;
+}

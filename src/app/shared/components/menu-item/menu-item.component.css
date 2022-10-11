@@ -1,0 +1,12 @@
+.menuItem-container {
+  margin: auto;
+  justify-content:  space-between;
+  align-items: flex-start;
+  height: 70px;
+  margin: 0.2rem 0rem;
+}
+
+
+.menuItem-txt{
+  margin: .1rem;
+}

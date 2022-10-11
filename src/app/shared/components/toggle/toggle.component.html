@@ -1,0 +1,10 @@
+<div class="gird-container">
+    <div *ngFor="let element of categories; let i = index">
+        <div class="toggle-container flex align-center center font-smaller semi-bold" 
+        [style.background-color]="i == 0 && toggle[i] ? '#CC8AFF' : i == 1 && toggle[i] ? '#FF8A9D' :  i == 2 && toggle[i] ? '#7AE1E3' : 'white'" [ngClass]="toggle[i] ? 'white-color' : 'dark-gray-color'" (click)="onClickedToggle(i)">
+            {{element }}
+        </div>
+    </div>
+</div>
+
+

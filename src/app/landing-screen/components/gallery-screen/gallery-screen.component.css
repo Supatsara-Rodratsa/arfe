@@ -1,0 +1,28 @@
+.gallery-container{
+  max-width: 500px;
+  /* column-count: 2;
+  column-gap: 1rem;
+  row-gap: 1rem; */
+  /* grid-row: auto;
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1; */
+  /* display:inline-block; */
+  column-count: 2;
+  column-gap: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
+  /* display: flex;
+  flex-flow: wrap; */
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+}
+
+.gallery-img{
+  width: 100% !important;
+  height: auto !important;
+  /*
+  flex-grow: 2; */
+  flex: 1 1 50px;
+  margin-bottom: 1rem;
+}

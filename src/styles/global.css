@@ -1,0 +1,102 @@
+body, html {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.purple-color {
+    color: var(--purple);
+}
+
+.light-blue-color {
+    color: var(--light-blue);
+}
+
+.light-gray-color {
+    color: var(--light-gray);
+}
+
+.pink-color {
+    color: var(--pink);
+}
+
+.black-color {
+    color: var(--black);
+}
+
+.gray-color {
+    color: var(--gray);
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.button {
+    height: 50px;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+}
+
+.raised-button {
+    background-color: var(--black);
+    color: white;
+}
+
+.center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+    height: 100%;
+}
+
+.main-container {
+    margin: auto;
+    max-width: 500px;
+    padding: 0px 40px;
+    height: 100%;
+}
+
+.pad-20 {
+    padding: 20px;
+}
+
+.dark-gray-color {
+    color: var(--dark-gray);
+}
+
+.white-color {
+    color: white;
+}
+
+.landing-container {
+    padding: 0px 20px;
+    height: calc(100% - 200px);
+    overflow-y: scroll;
+    transform: translateZ(0);
+}
+
+
+

@@ -1,0 +1,122 @@
+@media only screen and (max-width: 300px) {
+    #amazing-coffee, #welcome-to-arfe, #express-yourself {
+        background-size: 150px 150px !important;
+    
+    }
+    .picture-layout {
+        margin-bottom: 10px;
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #amazing-coffee, #welcome-to-arfe, #express-yourself {
+        background-size: 250px 250px !important;
+    
+    }
+    .picture-layout {
+        margin-bottom: 10px;
+        width: 250px !important;
+        height: 250px !important;
+    }
+
+    .button {
+        width: 115px !important;
+    }
+
+    .main-header {
+        margin: 15px 0px !important;
+    }
+
+    .main-info {
+        height: 50px !important;
+    }
+}
+
+#amazing-coffee {
+    background: url(src/assets/images/purple-onboarding.svg) no-repeat center;
+    background-size: 332px 332px;
+}
+
+#express-yourself {
+    background: url(src/assets/images/blue-onboarding.svg) no-repeat center;
+    background-size: 332px 332px;
+}
+
+#welcome-to-arfe {
+    background: url(src/assets/images/pink-onboarding.svg) no-repeat center;
+    background-size: 332px 332px;
+}
+
+#pagination-1 {
+    background: url(src/assets/images/pagination.svg) no-repeat center;
+    background-size: 68px 32px;
+}
+
+#pagination-2 {
+    background: url(src/assets/images/pagination-2.svg) no-repeat center;
+    background-size: 68px 32px;
+}
+
+#pagination-3 {
+    background: url(src/assets/images/pagination-3.svg) no-repeat center;
+    background-size: 68px 32px;
+}
+
+.pagination-layout {
+    width: 68px;
+    height: 32px;
+}
+
+.picture-layout {
+    margin-bottom: 20px;
+    width: 332px;
+    height: 332px;
+}
+
+.onboarding-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.main-info {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-alignment {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    width: 147px;
+    height: 50px;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+}
+
+.adjust-button {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.stroke-button {
+    background-color: transparent;
+    border-color: var(--black);
+}
+

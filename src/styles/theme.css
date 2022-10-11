@@ -1,0 +1,11 @@
+/* 1. import typography style */
+@import
+    "configurations/_typography.css";
+
+/* 2. import variable style */
+@import 
+    "configurations/_variables.css";
+
+@import 
+    "global.css";
+

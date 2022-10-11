@@ -1,0 +1,84 @@
+#main-logo {
+    background: url(src/assets/images/ARFE.svg) no-repeat center;
+    background-size: 162px 54px;
+}
+
+.picture-layout {
+    width: 162px;
+    height: 54px;
+}
+
+.adjust-height {
+    height: 80px;
+}
+
+input {
+    background: white;
+    border-radius: 10px;
+    width: fill-available;
+    filter: drop-shadow(0px 3px 13px rgba(0, 0, 0, 0.07));
+    border: transparent;
+    height: 45px;
+    padding: 0px 20px;
+}
+
+.recover-password {
+    height: 35px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.line {
+    width: fill-available;
+    text-align: center; 
+    border-bottom: 1px solid var(--light-gray); 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+} 
+ 
+ .line span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+
+.gray-bg {
+    background-color: var(--light) !important;
+ }
+
+.white-bg {
+    background-color: white !important;
+    box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.07) !important;
+ }
+
+.gird-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+ }
+
+ .logo-layout {
+    height: 150px;
+    align-items: end;
+}
+
+.skip-step {
+    height: 100px;
+    cursor: pointer;
+}
+
+.mgr-5 {
+    margin-right: 5px;
+}
+
+.mgt-2 {
+    margin-top: 2px;
+}
+
+@media only screen and (max-width: 400px) {
+    .logo-layout {
+        height: 110px !important;
+    }
+}

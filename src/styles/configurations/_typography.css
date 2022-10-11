@@ -1,0 +1,66 @@
+* {
+    font-family: Helvetica;
+}
+
+.font-header {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.font-mid-header {
+    font-size: 24px;
+}
+
+.font-regular {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.font-secondary-header {
+    font-size: 22px;
+}
+
+.font-small {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.font-smaller {
+    font-size: 12px;
+}
+
+.font-secondary-small {
+    font-size: 10px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.semi-bold {
+    font-weight: 500;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.italic {
+    font-style: italic;
+}
+
+@media only screen and (max-width: 400px) {
+    .font-regular {
+        font-size: 14px !important;
+    }
+    .font-header {
+        font-size: 22px !important;
+    }
+    .font-secondary-header {
+        font-size: 18px !important;
+    }
+    .font-small {
+        font-size: 12px !important;
+    }  
+}

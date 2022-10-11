@@ -1,0 +1,44 @@
+<div class="onboarding-container" [@fadeInOut]>
+    <div class="flex-col align-center text-align-center">
+        <div class="flex-col align-center text-align-center" *ngIf="count==1">
+            <div id="amazing-coffee" class="picture-layout"></div>
+            <div class="font-header purple-color main-header">
+                LOOKING FOR AN <br> AMAZING COFFEE ?
+            </div>
+            <div class="font-regular main-info">
+                Welcome to ARFÉ! We’re excited to <br> welcome to our community of <br> coffee lovers.
+            </div>
+        </div>
+        <div class="flex-col align-center text-align-center" *ngIf="count==2" [@slideInOut]>
+            <div id="express-yourself" class="picture-layout"></div>
+            <div class="font-header light-blue-color main-header">
+                AND A WAY TO <br> EXPRESS YOURSELF?
+            </div>
+            <div class="font-regular main-info">
+                Let’s get started! On this app you can <br>vote for artists, collect points to get free <br>drinks and grow as an artist yourself!
+            </div>
+        </div>
+        <div class="flex-col align-center text-align-center" *ngIf="count==3" [@slideInOut]>
+            <div id="welcome-to-arfe" class="picture-layout"></div>
+            <div class="font-header pink-color main-header">
+                WELCOME TO ARFÉ! 
+            </div>
+            <div class="font-regular main-info">
+                Before you start exploring, lets<br> create your ARFÉ profile.
+            </div>
+        </div>
+    </div>
+    <div class="pagination-alignment">
+        <div id="pagination-1" class="pagination-layout" *ngIf="count==1"></div>
+        <div id="pagination-2" class="pagination-layout" *ngIf="count==2"></div>
+        <div id="pagination-3" class="pagination-layout" *ngIf="count==3"></div>
+    </div>
+    <div class="flex-row main-info" >
+        <div *ngIf="count!=3 else start">
+            <button mat-stroked-button class="button stroke-button adjust-button font-secondary-header light">skip</button>
+            <button mat-raised-button class="button raised-button font-secondary-header bold" (click)="slideTabNext()">next</button>
+        </div>
+        <ng-template #start> <button mat-stroked-button class="button stroke-button font-secondary-header bold" (click)="navigateToLogin()" [@fadeInOut]>start</button> </ng-template>
+    </div>
+    
+</div>

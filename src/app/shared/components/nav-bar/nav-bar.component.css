@@ -1,0 +1,28 @@
+#profile {
+    background: url(src/assets/images/profile.png) no-repeat center;
+    background-size: 54px 54px;
+    border-radius: 50%;
+    border: 2px solid
+}
+
+.profile-layout {
+    width: 54px;
+    height: 54px;
+}
+
+svg, path {
+    width: 88px;
+    height: 30px;
+}
+
+.nav-height {
+    height: 55px;
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: fill-available;
+    z-index: 99;
+}
+
+
