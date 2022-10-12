@@ -2,6 +2,45 @@
     <app-nav-bar [mainColor]="'#FF8A9D'"></app-nav-bar>
     <div class="landing-container">
         <app-welcome-header [isCard]="true"></app-welcome-header>
+        <div class="card-container">
+            <img class="card-qr" src="assets/images/qrcode.png"/>
+            <!-- <div class="card-stars">
+                
+                <img class="card-star star1" src="assets/images/star.svg"/>
+                <img class="card-star star2" src="assets/images/star.svg"/>
+                <img class="card-star star3" src="assets/images/star.svg"/>
+                <img class="card-star star4" src="assets/images/star.svg"/>
+                <img class="card-star star5" src="assets/images/star.svg"/>
+                <img class="card-star star6" src="assets/images/star.svg"/>
+                <img class="card-star star7" src="assets/images/star.svg"/>
+                <img class="card-star star8" src="assets/images/star.svg"/>
+            </div> -->
+            <div class="card-circles">
+                <div class="card-circle">
+                    <img class="card-star star1" width="100%" src="assets/images/star.svg"/>
+                </div>
+                <div class="card-circle">
+                    <img class="card-star star1" width="100%" src="assets/images/star.svg"/>
+                </div>
+                <div class="card-circle">
+                    <img class="card-star star1" width="100%" src="assets/images/star.svg"/>
+                </div>
+                <div class="card-circle">
+                    <img class="card-star star1" width="100%" src="assets/images/star.svg"/>
+                </div>
+                <div class="card-circle">
+                    <img class="card-star star1" width="100%" src="assets/images/star.svg"/>
+                </div>
+                <div class="card-circle">
+                    <img class="card-star star1" width="100%" src="assets/images/star.svg"/>
+                </div>
+                <div class="card-circle">
+                    <img class="card-star star1" width="100%" src="assets/images/star.svg"/>
+                </div>
+                <div class="card-circle"></div>
+            </div>
+            <p>Only <span class="bold">1</span> Left until your <span class="bold">free drink!</span></p>
+        </div>
     </div> 
     <app-footer [currentItem]="'card'" (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
 </div>
