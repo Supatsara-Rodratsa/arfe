@@ -117,3 +117,8 @@ body, html {
     border-color: var(--black);
 }
 
+.icon-button {
+    border: 1px solid currentColor;
+    border-radius: 100rem;
+}
+

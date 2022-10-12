@@ -3,19 +3,23 @@
     <div class="landing-container">
         <app-welcome-header [isArfeProfile]="true"></app-welcome-header>
        <div>
-        <div class="flex-col profile-title">
-            <p class="margin-0 bold font-secondary-header">@stacyxoxo</p>
-            <p class="margin-0 font-small italic">Contemporary artist from Berlin, Germany.</p>
+        <div class="profile-title-container">
+                <div class="flex profile-title">
+                    <p class="bold font-mid-header">@stacyxoxo</p>
+                 <div>
+                    <button mat-stroked-button class="icon-button stroke-button adjust-button font-small light black-color">edit</button>
+                    <button mat-stroked-button class="icon-button stroke-button font-small light black-color">settings</button>
+                 </div>
+                </div>
+                <p class="margin-0 font-small italic">Contemporary artist from Berlin, Germany.</p>
         </div>
         <div class="flex space-between bold font-secondary-header">
             <p>39 <br> posts</p>
             <p>2.3k <br> followers</p>
             <p>55.7k <br> likes</p>
         </div>
-        <div class="flex space-between">
-            <button mat-stroked-button class="button stroke-button adjust-button font-small light black-color">Edit Profile</button>
-            <button mat-stroked-button class="button stroke-button adjust-button font-small light black-color">Settings</button>
-            <button mat-stroked-button class="button stroke-button adjust-button font-small light black-color">Upload</button>
+        <div class="profile-upload">
+            <button mat-stroked-button class="button stroke-button font-secondary-header light black-color">upload new art</button>
         </div>
         <div class="gallery-container">
             <img class="gallery-img"  src="assets/images/paintings/painting1.jpg"/>
