@@ -1,0 +1,11 @@
+<div class="flex-col space-between">
+    <app-nav-bar [mainColor]="'black'"></app-nav-bar>
+    <div class="landing-container">
+        <div class="flex-col space-between">
+            <div class="border-one"><img src={{url}}></div>
+            <button mat-stroked-button class="upload-button button stroke-button font-secondary-header bold round-button second-gray">upload</button>
+        </div>
+        
+    </div> 
+    <app-footer [currentItem]="'gallery'" (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
+</div>
