@@ -68,3 +68,9 @@
         font-size: 12px !important;
     }  
 }
+
+@media only screen and (max-width: 400px) {
+    .font-header {
+        font-size: 18px !important;
+    }
+}

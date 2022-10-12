@@ -2,28 +2,57 @@
     <app-nav-bar [mainColor]="'#FFCD29'"></app-nav-bar>
     <div class="landing-container">
         <app-welcome-header [isGallery]="true"></app-welcome-header>
-        <div class="gallery-container">
-            <img class="gallery-img"  src="assets/images/art1.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting1.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting2.jpg"/>
-            <img class="gallery-img"  src="assets/images/art2.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting3.jpg"/>
-            <img class="gallery-img"  src="assets/images/art9.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting4.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting5.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting6.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting7.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting8.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting9.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting10.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting11.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting12.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting13.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting14.jpg"/>
-            <img class="gallery-img"  src="assets/images/art2.jpg"/>
-            <img class="gallery-img"  src="assets/images/art3.jpg"/>
-            <img class="gallery-img"  src="assets/images/art4.jpg"/>
+        <div class="flex-col align-center">
+            <div class="gallery-container">
+                <img class="gallery-img"  src="assets/images/art1.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting1.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting2.jpg"/>
+                <img class="gallery-img"  src="assets/images/art2.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting3.jpg"/>
+                <img class="gallery-img"  src="assets/images/art9.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting4.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting5.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting6.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting7.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting8.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting9.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting10.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting11.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting12.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting13.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting14.jpg"/>
+                <img class="gallery-img"  src="assets/images/art2.jpg"/>
+                <img class="gallery-img"  src="assets/images/art3.jpg"/>
+                <img class="gallery-img"  src="assets/images/art4.jpg"/>
+            </div>
+            <div class="arfraim-img">
+                <img class="arfraim-layout" src="assets/images/arfraim.jpg" (click)="fileUpload.click()" width="279" height="372"/>
+                <input type="file" class="file-input"(change)="onFileSelected($event)" #fileUpload>       
+            </div>
+            <div class="gallery-container mg-top">
+                <img class="gallery-img"  src="assets/images/art1.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting1.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting2.jpg"/>
+                <img class="gallery-img"  src="assets/images/art2.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting3.jpg"/>
+                <img class="gallery-img"  src="assets/images/art9.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting4.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting5.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting6.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting7.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting8.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting9.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting10.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting11.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting12.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting13.jpg"/>
+                <img class="gallery-img"  src="assets/images/paintings/painting14.jpg"/>
+                <img class="gallery-img"  src="assets/images/art2.jpg"/>
+                <img class="gallery-img"  src="assets/images/art3.jpg"/>
+                <img class="gallery-img"  src="assets/images/art4.jpg"/>
+            </div>
         </div>
+       
     </div> 
     <app-footer [currentItem]="'gallery'" (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
 </div>

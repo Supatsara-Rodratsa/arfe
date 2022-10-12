@@ -117,6 +117,14 @@ body, html {
     border-color: var(--black);
 }
 
+.round-button {
+    border-radius: 30px !important;
+}
+
+.second-gray {
+    color: var(--gray-2);
+}
+
 .icon-button {
     border: 1px solid currentColor;
     border-radius: 100rem;
