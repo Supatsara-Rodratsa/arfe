@@ -1,7 +1,10 @@
 <div class="flex-col space-between">
     <app-nav-bar [mainColor]="'#FFFFFF'" [background]="selectedMenu?.color"></app-nav-bar>
     <div class="landing-container pad-0">
-        <app-menu-detail [menu]="selectedMenu"></app-menu-detail>
+        <div *ngFor="let item of getAllList(); let i = index">
+            <app-menu-detail [menu]="item" [currentIndex]="item.index" [allLength]="allItems.length" (updateIndex)="getCurrentIndex($event)" *ngIf="item.index == currentIndex"></app-menu-detail>
+            <!-- {{item.name}} {{item.index}} {{allItems[currentIndex].name}} {{currentIndex}} -->
+        </div>
     </div> 
     <app-footer [currentItem]="'menu'" (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
 </div>

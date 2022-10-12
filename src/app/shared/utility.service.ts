@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Menu } from '../landing-screen/components/all-menu-screen/all-menu.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,8 @@ import { Router } from '@angular/router';
 export class UtilitiesService {
 
     private uploadedImage: FileReader | undefined;
+    private selectedMenu: Menu | undefined;
+    private selectedCategories: Menu[] = [];
 
     constructor(
         private router: Router
@@ -41,5 +44,21 @@ export class UtilitiesService {
 
     getImage() {
       return this.uploadedImage;
+    }
+
+    setSelectedMenu(item: Menu) {
+      this.selectedMenu = item;
+    }
+
+    getSelectedMenu() {
+      return this.selectedMenu;
+    }
+
+    setSelectedCategoriesItems(items: Menu[]) {
+      this.selectedCategories = items;
+    }
+
+    getSelectedCategoriesItems() {
+      return this.selectedCategories;
     }
 }

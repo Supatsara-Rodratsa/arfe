@@ -121,3 +121,9 @@ body, html {
     color: var(--gray-2);
 }
 
+@media only screen and (max-height: 680px) {
+    .button{
+      height: 40px !important;
+    }
+  }
+
