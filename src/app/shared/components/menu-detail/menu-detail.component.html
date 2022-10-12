@@ -1,16 +1,19 @@
-<div class="flex-col">
-<!-- <div class="test-bg"></div> -->
-  <div class="test-bg flex-col align-center">
-    <p class="menuItem-txt font-secondary-header black-color bold">Iced LattÉ</p>
-    <img src="assets/images/icedCoffee.png"/>
+<div class="flex-col space-between">
+  <div class="flex-col">
+    <div class="test-bg flex-col align-center" [style.background-color]="menu?.color">
+      <p class="menuItem-txt font-header black-color bold uppercase">{{menu?.name}}</p>
+      <img src={{menu?.image}}/>
+    </div>
+    <div class="menuItem-container flex" >
+      <div class="menuItem">
+        <p class="menuItem-txt font-small">{{menu?.quantity}}</p>
+        <p class="menuItem-txt font-small">{{menu?.ingredient}}</p>
+      </div>
+      <p class="menuItem-txt black-color bold"><span>&#8364;</span>{{menu?.price}}</p>
+    </div>
   </div>
-<div class="menuItem-container flex" >
-  <div class="menuItem">
-    <p class="menuItem-txt font-small">300ml</p>
-    <p class="menuItem-txt font-small">Espresso with milk, iced</p>
+  <div class="flex-row center pad-20">
+    <button mat-stroked-button class="button stroke-button adjust-button font-secondary-header light button-menu">view cart</button>
+    <button mat-stroked-button class="button raised-button font-secondary-header light button-menu">add to cart</button>
   </div>
-<p class="menuItem-txt black-color bold"><span>&#8364;</span>
-  4,00</p>
-</div>
-<button mat-stroked-button class="button stroke-button adjust-button font-secondary-header light">view cart</button>
 </div>

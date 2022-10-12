@@ -103,20 +103,4 @@
     justify-content: center;
 }
 
-.button {
-    width: 147px;
-    height: 50px;
-    border-radius: 6px !important;
-    box-shadow: none !important;
-}
-
-.adjust-button {
-    flex: 0 0 auto;
-    margin-right: 20px;
-}
-
-.stroke-button {
-    background-color: transparent;
-    border-color: var(--black);
-}
 

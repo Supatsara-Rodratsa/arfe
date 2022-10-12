@@ -3,7 +3,8 @@ export interface Menu {
     quantity?: any,
     ingredient: any,
     price: any,
-    color: any
+    color: any,
+    image?: string
 }
 
 export const iceCoffee: Menu[] = [
@@ -12,7 +13,8 @@ export const iceCoffee: Menu[] = [
         price: '4,00',
         quantity: '300ml',
         ingredient: 'Espresso with milk, iced',
-        color: '#CC8AFF'
+        color: '#CC8AFF',
+        image: 'assets/images/icedCoffee.png'
     },
     {
         name: 'Iced Matcha',

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UtilitiesService } from 'src/app/shared/utility.service';
 import { breakfast, coldDrink, hotCoffee, hotDrink, iceCoffee, Menu, sweetCorner } from './all-menu.interface';
 
@@ -19,6 +20,7 @@ export class AllMenuScreenComponent implements OnInit {
 
   constructor(
     public utilitiesService: UtilitiesService,
+    private router: Router
   ) { }
 
 
@@ -54,5 +56,15 @@ export class AllMenuScreenComponent implements OnInit {
       this.isSelectedSnack = true;
       this.color = '#75D6D8';
     }
+  }
+
+  selectedMenu(item: Menu) {
+    console.log(item);
+
+    this.router.navigate(
+      ['/selectedMenu'],
+      { queryParams: item }
+    );
+    
   }
 }

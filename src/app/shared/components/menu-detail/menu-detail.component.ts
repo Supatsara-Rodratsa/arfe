@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Menu } from 'src/app/landing-screen/components/all-menu-screen/all-menu.interface';
 
 @Component({
   selector: 'app-menu-detail',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-detail.component.css']
 })
 export class MenuDetailComponent implements OnInit {
+
+  @Input() menu: Menu | undefined;
 
   constructor() { }
 

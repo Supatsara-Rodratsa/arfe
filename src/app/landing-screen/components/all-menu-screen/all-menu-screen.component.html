@@ -10,7 +10,7 @@
                 <div *ngFor="let coffee of coffeeHashMap | keyvalue; let i = index">
                     <div  *ngFor="let item of coffee.value; let j = index">
                         <div class="font-mid-header bold menu-header menu-layout" [style.color]="item.color" *ngIf="j==0">{{coffee.key}}</div>
-                        <app-menu-item [name]="item.name" [quantity]="item.quantity" [ingredient]="item.ingredient" [price]="item.price"></app-menu-item>
+                        <app-menu-item [name]="item.name" [quantity]="item.quantity" [ingredient]="item.ingredient" [price]="item.price" (click)="selectedMenu(item)"></app-menu-item>
                     </div><br>
                 </div>
             </div>
@@ -18,7 +18,7 @@
                 <div *ngFor="let coffee of drinkHashMap | keyvalue; let i = index">
                     <div  *ngFor="let item of coffee.value; let j = index">
                         <div class="font-mid-header bold menu-header menu-layout" [style.color]="item.color" *ngIf="j==0">{{coffee.key}}</div>
-                        <app-menu-item [name]="item.name" [quantity]="item.quantity" [ingredient]="item.ingredient" [price]="item.price"></app-menu-item>
+                        <app-menu-item [name]="item.name" [quantity]="item.quantity" [ingredient]="item.ingredient" [price]="item.price" (click)="selectedMenu(item)"></app-menu-item>
                     </div><br>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <div *ngFor="let coffee of snackHashMap | keyvalue; let i = index">
                     <div  *ngFor="let item of coffee.value; let j = index">
                         <div class="font-mid-header bold menu-header menu-layout" [style.color]="item.color" *ngIf="j==0">{{coffee.key}}</div>
-                        <app-menu-item [name]="item.name" [quantity]="item.quantity" [ingredient]="item.ingredient" [price]="item.price"></app-menu-item>
+                        <app-menu-item [name]="item.name" [quantity]="item.quantity" [ingredient]="item.ingredient" [price]="item.price" (click)="selectedMenu(item)"></app-menu-item>
                     </div><br>
                 </div>
             </div>
