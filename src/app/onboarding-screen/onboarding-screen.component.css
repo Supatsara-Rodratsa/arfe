@@ -103,4 +103,11 @@
     justify-content: center;
 }
 
+.button {
+    width: 147px;
+    height: 50px;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+}
+
 
