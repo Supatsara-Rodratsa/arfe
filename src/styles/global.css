@@ -113,3 +113,11 @@ body, html {
     border-color: var(--black);
 }
 
+.round-button {
+    border-radius: 30px !important;
+}
+
+.second-gray {
+    color: var(--gray-2);
+}
+
