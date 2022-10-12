@@ -1,6 +1,34 @@
 <div class="flex-col space-between">
     <app-nav-bar [mainColor]="'#0D99FF'"></app-nav-bar>
     <div class="landing-container">
+        <app-welcome-header [isArfeProfile]="true"></app-welcome-header>
+       <div>
+        <div class="flex-col profile-title">
+            <p class="margin-0 bold font-secondary-header">@stacyxoxo</p>
+            <p class="margin-0 font-small italic">Contemporary artist from Berlin, Germany.</p>
+        </div>
+        <div class="flex space-between bold font-secondary-header">
+            <p>39 posts</p>
+            <p>2.3k followers</p>
+            <p>55.7k likes</p>
+        </div>
+        <div class="flex space-between">
+            <button mat-stroked-button class="button stroke-button adjust-button font-small light black-color">Edit Profile</button>
+            <button mat-stroked-button class="button stroke-button adjust-button font-small light black-color">Settings</button>
+            <button mat-stroked-button class="button stroke-button adjust-button font-small light black-color">Upload</button>
+        </div>
+        <div class="gallery-container">
+            <img class="gallery-img"  src="assets/images/paintings/painting1.jpg"/>
+            <img class="gallery-img"  src="assets/images/paintings/painting2.jpg"/>
+            <img class="gallery-img"  src="assets/images/paintings/painting7.jpg"/>
+            <img class="gallery-img"  src="assets/images/paintings/painting9.jpg"/>
+            <img class="gallery-img"  src="assets/images/paintings/painting10.jpg"/>
+            <img class="gallery-img"  src="assets/images/paintings/painting11.jpg"/>
+            <img class="gallery-img"  src="assets/images/paintings/painting12.jpg"/>
+            <img class="gallery-img"  src="assets/images/paintings/painting13.jpg"/>
+            <img class="gallery-img"  src="assets/images/paintings/painting18.jpg"/>
+        </div>
+       </div>
     </div> 
     <app-footer (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
 </div>
