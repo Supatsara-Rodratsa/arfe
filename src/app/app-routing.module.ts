@@ -47,8 +47,11 @@ const routes: Routes = [
     path: 'arfraim',
     component: UploadPhotoComponent
   },
-  {
-    path: '**', redirectTo: ''
+  { 
+    path: '', redirectTo: 'gallery', pathMatch: 'full' 
+  },
+  { 
+    path: '**', redirectTo: 'gallery', pathMatch: 'full' 
   }
 ];
 

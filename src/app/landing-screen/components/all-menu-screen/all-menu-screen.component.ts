@@ -16,6 +16,9 @@ export class AllMenuScreenComponent implements OnInit {
   public isSelectedCoffee: boolean = true;
   public isSelectedDrink: boolean = false;
   public isSelectedSnack: boolean = false;
+  private allCoffee: Menu[] = [];
+  private allDrinks: Menu[] = [];
+  private allSnacks: Menu[] = [];
   public color: string = '#CC8AFF';
 
   constructor(
@@ -27,12 +30,15 @@ export class AllMenuScreenComponent implements OnInit {
   ngOnInit(): void {
     this.coffeeHashMap.set('ICED COFFEE', iceCoffee);
     this.coffeeHashMap.set('HOT COFFEE', hotCoffee);
+    this.allCoffee = [...hotCoffee.concat(iceCoffee)];
 
     this.drinkHashMap.set('COLD DRINKS', coldDrink);
     this.drinkHashMap.set('HOT DRINKS', hotDrink);
+    this.allDrinks = [...coldDrink.concat(hotDrink)];
 
     this.snackHashMap.set('SWEET CORNER', sweetCorner);
     this.snackHashMap.set('BREAKFAST', breakfast);
+    this.allSnacks = [...sweetCorner.concat(breakfast)];
   }
 
   selectedCategories(items: string) {
@@ -59,12 +65,19 @@ export class AllMenuScreenComponent implements OnInit {
   }
 
   selectedMenu(item: Menu) {
-    console.log(item);
-
+    if (this.allCoffee.some(val => val.name == item.name)) {
+      this.utilitiesService.setSelectedCategoriesItems(this.allCoffee);
+    } else if (this.allDrinks.some(val => val.name == item.name)) {
+      this.utilitiesService.setSelectedCategoriesItems(this.allDrinks);
+    } else {
+      this.utilitiesService.setSelectedCategoriesItems(this.allSnacks);
+    }
+    this.utilitiesService.setSelectedMenu(item);
     this.router.navigate(
-      ['/selectedMenu'],
-      { queryParams: item }
+      ['/selectedMenu'], 
+      { queryParams: {name: item.name} }
     );
+    console.log(item.name);
     
   }
 }

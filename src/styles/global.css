@@ -125,6 +125,12 @@ body, html {
     color: var(--gray-2);
 }
 
+@media only screen and (max-height: 680px) {
+    .button{
+      height: 40px !important;
+    }
+  }
+
 .icon-button {
     border: 1px solid currentColor;
     border-radius: 100rem;
