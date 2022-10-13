@@ -23,18 +23,12 @@
             <p>55.7k <br> likes</p>
         </div>
         <div class="profile-upload">
-            <button mat-stroked-button class="button blue-button round-button font-secondary-header light">upload new art</button>
+            <button mat-stroked-button class="button blue-button round-button font-secondary-header light" (click)="goToUploadArtWork()">upload new art</button>
         </div>
-        <div class="gallery-container mgt-30">
-            <img class="gallery-img"  src="assets/images/paintings/painting1.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting2.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting7.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting9.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting10.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting11.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting12.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting13.jpg"/>
-            <img class="gallery-img"  src="assets/images/paintings/painting18.jpg"/>
+        <div class="gal-grid mgt-30">
+            <div *ngFor="let photo of gallery">
+                <img style="object-fit: cover;"  src="{{photo}}" height="100%" width="100%"/>
+            </div>
         </div>
        </div>
     </div> 

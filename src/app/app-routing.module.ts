@@ -9,6 +9,7 @@ import { OrderScreenComponent } from './landing-screen/components/order-screen/o
 import { ProfileScreenComponent } from './landing-screen/components/profile-screen/profile-screen.component';
 import { RankingScreenComponent } from './landing-screen/components/ranking-screen/ranking-screen.component';
 import { ShoppingCartComponent } from './landing-screen/components/shopping-cart/shopping-cart.component';
+import { UploadArtworkComponent } from './landing-screen/components/upload-artwork/upload-artwork.component';
 import { UploadPhotoComponent } from './landing-screen/components/upload-photo/upload-photo.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 
@@ -56,6 +57,10 @@ const routes: Routes = [
   {
     path: 'yourOrder',
     component: OrderScreenComponent
+  },
+  {
+    path: 'uploadArtwork',
+    component: UploadArtworkComponent
   },
   { 
     path: '', redirectTo: 'gallery', pathMatch: 'full' 
