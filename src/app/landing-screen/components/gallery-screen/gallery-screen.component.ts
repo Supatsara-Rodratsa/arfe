@@ -21,7 +21,9 @@ export class GalleryScreenComponent implements OnInit {
   ngOnInit(): void {
     const getNewImage: FileReader[] = this.utilitiesService.getImage() || [];
     if (getNewImage.length > 0) {
-      this.allArtWorks = getNewImage.concat(this.allArtWorks);
+      this.allArtWorks = this.shuffle(getNewImage.concat(this.allArtWorks));
+    } else {
+      this.allArtWorks = this.shuffle(this.allArtWorks);
     }
   }
 
@@ -48,4 +50,22 @@ export class GalleryScreenComponent implements OnInit {
         }
     }
   }
+
+  shuffle(array: any[]): any[] {
+    let currentIndex = array.length,  randomIndex;
+
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+};
 }

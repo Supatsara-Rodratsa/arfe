@@ -19,8 +19,13 @@ export class MenuViewScreenComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedMenu = this.utilitiesService.getSelectedMenu();
-    this.allItems = this.utilitiesService.getSelectedCategoriesItems();
-    this.currentIndex = this.allItems.find(val => val.index == this.selectedMenu?.index)?.index || 0;
+    if (this.selectedMenu) {
+      this.allItems = this.utilitiesService.getSelectedCategoriesItems();
+      this.currentIndex = this.allItems.find(val => val.index == this.selectedMenu?.index)?.index || 0;
+    } else {
+      this.utilitiesService.selectedIcon('menu')
+    }
+    
   }
 
   getCurrentIndex(index: number) {
