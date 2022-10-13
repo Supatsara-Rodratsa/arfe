@@ -8,9 +8,12 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
-  @Input() mainColor = "yellow";
+  @Input() set mainColor(color: any) {
+    this.color = color;
+  }
   @Input() background = null;
 
+  public color: any | undefined
   constructor(
     private router: Router
   ) {}

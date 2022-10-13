@@ -21,14 +21,10 @@ export class MenuViewScreenComponent implements OnInit {
     this.selectedMenu = this.utilitiesService.getSelectedMenu();
     this.allItems = this.utilitiesService.getSelectedCategoriesItems();
     this.currentIndex = this.allItems.find(val => val.index == this.selectedMenu?.index)?.index || 0;
-    console.log(this.allItems);
-    console.log(this.currentIndex);
   }
 
   getCurrentIndex(index: number) {
     this.currentIndex = index;
-    console.log(this.currentIndex);
-    
   }
 
   getAllList() {
