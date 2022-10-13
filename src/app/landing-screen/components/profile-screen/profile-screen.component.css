@@ -14,7 +14,7 @@
   }
 
 .profile-title-container {
-    margin: 2rem 0rem;
+    margin: 1rem 0rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,4 +35,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
+}
+
+.mgb-10 {
+  margin-bottom: 10px;
+}
+
+.mgt-30 {
+  margin-top: 30px !important;
 }

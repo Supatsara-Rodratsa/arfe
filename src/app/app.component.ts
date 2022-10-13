@@ -9,9 +9,6 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'arfe-project';
 
-  constructor(private router: Router) {}
-
   ngOnInit() {
-    this.router.navigate([''])
   }
 }
