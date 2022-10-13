@@ -87,3 +87,7 @@ input {
         height: 110px !important;
     }
 }
+
+.gird-2 {
+    display: grid;
+}

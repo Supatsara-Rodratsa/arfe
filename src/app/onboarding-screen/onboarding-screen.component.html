@@ -35,7 +35,7 @@
     </div>
     <div class="flex-row main-info" >
         <div *ngIf="count!=3 else start">
-            <button mat-stroked-button class="button stroke-button adjust-button font-secondary-header light black-color">skip</button>
+            <button mat-stroked-button class="button stroke-button adjust-button font-secondary-header light black-color" (click)="navigateToLogin()">skip</button>
             <button mat-raised-button class="button raised-button font-secondary-header bold" (click)="slideTabNext()">next</button>
         </div>
         <ng-template #start> <button mat-stroked-button class="button stroke-button font-secondary-header bold black-color" (click)="navigateToLogin()" [@fadeInOut]>start</button> </ng-template>
