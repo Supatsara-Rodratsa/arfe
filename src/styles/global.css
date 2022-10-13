@@ -124,6 +124,12 @@ body, html {
     border-color: black;
 }
 
+.blue-button {
+    background-color: var(--blue);
+    color: white;
+    border-color: black;
+}
+
 .round-button {
     border-radius: 30px !important;
 }
@@ -140,7 +146,14 @@ body, html {
 
 .icon-button {
     border: 1px solid currentColor;
-    border-radius: 100rem;
+    border-radius: 100rem !important;
+    min-width: 2.5rem !important;
+    min-height: 2.5rem !important;
+    padding: 0rem !important ;
+    filter: drop-shadow(0px 3px 13px rgba(0, 0, 0, 0.07)) !important;
+    background-color: white !important;
+    border: none !important;
+
 }
 
 .mg-0 {
@@ -169,5 +182,8 @@ body, html {
 
 .pad-top-0 {
     padding-top: 0 !important;
+}
+.mg-right {
+    margin-right: .4rem !important;
 }
 
