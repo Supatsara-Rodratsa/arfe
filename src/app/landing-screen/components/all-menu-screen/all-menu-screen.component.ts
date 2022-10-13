@@ -94,4 +94,12 @@ export class AllMenuScreenComponent implements OnInit {
       ['/selectedMenu']
     );    
   }
+
+  getCurrentCartItem() {
+    return this.utilitiesService.getCartItem().length;
+  }
+
+  goToShoppingCart() {
+    this.utilitiesService.selectedIcon('cart');
+  }
 }

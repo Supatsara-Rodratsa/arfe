@@ -1,0 +1,30 @@
+.border-top {
+    border-top: 1px solid #EFEFEF;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.gird-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+ }
+
+ .total {
+    margin-top: 30px;
+    border-top: 4px solid black;
+    width: fit-content;
+    text-align: right;
+    justify-self: right;
+    padding-top: 5px;
+ }
+ 
+ .place-order {
+    margin-top: 50px;
+ }
+
+ .mg-auto {
+    margin: auto;
+ }

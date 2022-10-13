@@ -1,9 +1,12 @@
 <div class="flex-col space-between">
     <app-nav-bar [mainColor]="'#FFFFFF'" [background]="selectedMenu?.color"></app-nav-bar>
+    <div class="count-item" *ngIf="getCurrentCartItem() != 0">{{getCurrentCartItem()}}</div>
+    <button class="fab" mat-fab color="primary" *ngIf="getCurrentCartItem() != 0" (click)="goToShoppingCart()">
+        <div id="fab-icon" class="fab-layout "></div>
+    </button>
     <div class="landing-container pad-0">
         <div *ngFor="let item of getAllList(); let i = index">
             <app-menu-detail [menu]="item" [currentIndex]="item.index" [allLength]="allItems.length" (updateIndex)="getCurrentIndex($event)" *ngIf="item.index == currentIndex"></app-menu-detail>
-            <!-- {{item.name}} {{item.index}} {{allItems[currentIndex].name}} {{currentIndex}} -->
         </div>
     </div> 
     <app-footer [currentItem]="'menu'" (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>

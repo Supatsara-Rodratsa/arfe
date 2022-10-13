@@ -36,4 +36,12 @@ export class MenuViewScreenComponent implements OnInit {
     return this.allItems;
   }
 
+  getCurrentCartItem() {
+    return this.utilitiesService.getCartItem().length;
+  }
+
+  goToShoppingCart() {
+    this.utilitiesService.selectedIcon('cart');
+  }
+
 }

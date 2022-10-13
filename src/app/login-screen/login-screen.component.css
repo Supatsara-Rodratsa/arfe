@@ -20,6 +20,7 @@ input {
     border: transparent;
     height: 45px;
     padding: 0px 20px;
+    font-size: 16px;
 }
 
 .recover-password {

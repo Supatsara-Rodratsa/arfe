@@ -9,7 +9,7 @@
                 Welcome to ARFÉ! We’re excited to <br> welcome to our community of <br> coffee lovers.
             </div>
         </div>
-        <div class="flex-col align-center text-align-center" *ngIf="count==2" [@slideInOut]>
+        <div class="flex-col align-center text-align-center" *ngIf="count==2" >
             <div id="express-yourself" class="picture-layout"></div>
             <div class="font-header light-blue-color main-header">
                 AND A WAY TO <br> EXPRESS YOURSELF?
@@ -18,7 +18,7 @@
                 Let’s get started! On this app you can <br>vote for artists, collect points to get free <br>drinks and grow as an artist yourself!
             </div>
         </div>
-        <div class="flex-col align-center text-align-center" *ngIf="count==3" [@slideInOut]>
+        <div class="flex-col align-center text-align-center" *ngIf="count==3">
             <div id="welcome-to-arfe" class="picture-layout"></div>
             <div class="font-header pink-color main-header">
                 WELCOME TO ARFÉ! 
@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div class="pagination-alignment">
+    <div class="pagination-alignment" [@slideInOut]>
         <div id="pagination-1" class="pagination-layout" *ngIf="count==1"></div>
         <div id="pagination-2" class="pagination-layout" *ngIf="count==2"></div>
         <div id="pagination-3" class="pagination-layout" *ngIf="count==3"></div>

@@ -67,5 +67,5 @@ export class GalleryScreenComponent implements OnInit {
     }
   
     return array;
-};
+  };
 }

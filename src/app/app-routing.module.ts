@@ -7,6 +7,7 @@ import { GalleryScreenComponent } from './landing-screen/components/gallery-scre
 import { MenuViewScreenComponent } from './landing-screen/components/menu-view-screen/menu-view-screen.component';
 import { ProfileScreenComponent } from './landing-screen/components/profile-screen/profile-screen.component';
 import { RankingScreenComponent } from './landing-screen/components/ranking-screen/ranking-screen.component';
+import { ShoppingCartComponent } from './landing-screen/components/shopping-cart/shopping-cart.component';
 import { UploadPhotoComponent } from './landing-screen/components/upload-photo/upload-photo.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'arfraim',
     component: UploadPhotoComponent
+  },
+  {
+    path: 'shoppingCart',
+    component: ShoppingCartComponent
   },
   { 
     path: '', redirectTo: 'gallery', pathMatch: 'full' 
