@@ -12,14 +12,25 @@ export class UploadPhotoComponent implements OnInit {
   public uploadedImage: any;
   private imagePath: any;
   public url: any = null;
+  private allImages: FileReader[] = [];
 
   constructor(
     public utilitiesService: UtilitiesService,
-    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.url = this.utilitiesService.getImage();
+    this.allImages = this.utilitiesService.getImage();
+    this.url = this.allImages[this.allImages.length-1];
+  }
+
+  cancel() {
+    this.allImages.pop();
+    this.utilitiesService.updateImage(this.allImages);
+    this.utilitiesService.selectedIcon('gallery');
+  }
+
+  upload() {
+    this.utilitiesService.selectedIcon('gallery');
   }
 
 }

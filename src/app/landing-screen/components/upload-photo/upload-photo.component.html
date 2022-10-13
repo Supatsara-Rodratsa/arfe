@@ -3,7 +3,10 @@
     <div class="landing-container">
         <div class="flex-col space-between">
             <div class="border-one"><img src={{url}}></div>
-            <button mat-stroked-button class="upload-button button stroke-button font-secondary-header bold round-button second-gray">upload</button>
+            <div class="flex-row center mgb-50">
+                <button mat-stroked-button class="upload-button stroke-button button adjust-button font-secondary-header bold round-button" (click)="cancel()">cancel</button>
+                <button mat-stroked-button class="upload-button button font-secondary-header bold round-button black-button" (click)="upload()">upload</button>
+            </div>
         </div>
         
     </div> 

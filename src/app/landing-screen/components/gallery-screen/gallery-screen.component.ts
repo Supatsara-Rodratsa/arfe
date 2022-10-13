@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UtilitiesService } from 'src/app/shared/utility.service';
+import { AllArtWorks } from './gallery.interface';
 
 @Component({
   selector: 'app-gallery-screen',
@@ -11,12 +12,17 @@ export class GalleryScreenComponent implements OnInit {
   public message: string = '';
   public url: any = null;
   private imagePath: any;
+  public allArtWorks: any[] = AllArtWorks;
 
   constructor(
     public utilitiesService: UtilitiesService,
   ) { }
 
   ngOnInit(): void {
+    const getNewImage: FileReader[] = this.utilitiesService.getImage() || [];
+    if (getNewImage.length > 0) {
+      this.allArtWorks = getNewImage.concat(this.allArtWorks);
+    }
   }
 
   onFileSelected(event: any) {

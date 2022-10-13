@@ -8,9 +8,10 @@ import { Menu } from '../landing-screen/components/all-menu-screen/all-menu.inte
 
 export class UtilitiesService {
 
-    private uploadedImage: FileReader | undefined;
+    private uploadedImage: FileReader[] = [];
     private selectedMenu: Menu | undefined;
     private selectedCategories: Menu[] = [];
+    private selectedCategory: string | undefined;
 
     constructor(
         private router: Router
@@ -18,6 +19,7 @@ export class UtilitiesService {
 
     selectedIcon(event: string, params?: any) {
       if (event == 'menu') {
+        this.selectedCategory = 'Coffee';
         this.router.navigate(['menu']);
       } 
   
@@ -39,7 +41,11 @@ export class UtilitiesService {
     }
 
     setImage(pic: FileReader) {
-      this.uploadedImage = pic;
+      this.uploadedImage?.push(pic);
+    }
+
+    updateImage(pics: FileReader[]) {
+      this.uploadedImage = [...pics];
     }
 
     getImage() {
@@ -60,5 +66,13 @@ export class UtilitiesService {
 
     getSelectedCategoriesItems() {
       return this.selectedCategories;
+    }
+
+    setSelectedCategory(item: string) {
+      this.selectedCategory = item;
+    }
+
+    getSelectedCategory() {
+      return this.selectedCategory;
     }
 }

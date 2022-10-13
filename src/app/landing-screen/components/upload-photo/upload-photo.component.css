@@ -21,11 +21,19 @@
     img {
         max-width: 210px !important;
     }
-}
+  }
+
+  @media only screen and (max-height: 670px) {
+    img {
+        max-width: 210px !important;
+    }
+  }
 
   .upload-button {
-    height: 40px;
-    margin: auto;
     width: 135px;
-    border: 2px solid;
+    /* border: 2px solid; */
+  }
+
+  .mgb-50 {
+    margin-bottom: 50px;
   }

@@ -13,13 +13,13 @@ export class AllMenuScreenComponent implements OnInit {
   public coffeeHashMap: Map<string, Menu[]> = new Map<string, Menu[]>(); 
   public drinkHashMap: Map<string, Menu[]> = new Map<string, Menu[]>(); 
   public snackHashMap: Map<string, Menu[]> = new Map<string, Menu[]>(); 
-  public isSelectedCoffee: boolean = true;
+  public isSelectedCoffee: boolean = false;
   public isSelectedDrink: boolean = false;
   public isSelectedSnack: boolean = false;
   private allCoffee: Menu[] = [];
   private allDrinks: Menu[] = [];
   private allSnacks: Menu[] = [];
-  public color: string = '#CC8AFF';
+  public color: string = '';
 
   constructor(
     public utilitiesService: UtilitiesService,
@@ -28,6 +28,20 @@ export class AllMenuScreenComponent implements OnInit {
 
 
   ngOnInit(): void {
+    let selectedCategory = this.utilitiesService.getSelectedCategory();
+    if (selectedCategory == 'Snacks') {
+      this.color = '#75D6D8';
+      this.isSelectedSnack = true;
+    }
+    else if (selectedCategory == 'Drinks') {
+      this.color = '#FF8A9D';
+      this.isSelectedDrink = true;
+    }
+    else {
+      this.color = '#CC8AFF';
+      this.isSelectedCoffee = true;
+    }
+
     this.coffeeHashMap.set('ICED COFFEE', iceCoffee);
     this.coffeeHashMap.set('HOT COFFEE', hotCoffee);
     this.allCoffee = [...hotCoffee.concat(iceCoffee)];
@@ -65,19 +79,19 @@ export class AllMenuScreenComponent implements OnInit {
   }
 
   selectedMenu(item: Menu) {
-    if (this.allCoffee.some(val => val.name == item.name)) {
+    if (this.isSelectedCoffee) {
       this.utilitiesService.setSelectedCategoriesItems(this.allCoffee);
-    } else if (this.allDrinks.some(val => val.name == item.name)) {
+      this.utilitiesService.setSelectedCategory('Coffee');
+    } else if (this.isSelectedDrink) {
       this.utilitiesService.setSelectedCategoriesItems(this.allDrinks);
+      this.utilitiesService.setSelectedCategory('Drinks');
     } else {
       this.utilitiesService.setSelectedCategoriesItems(this.allSnacks);
+      this.utilitiesService.setSelectedCategory('Snacks');
     }
     this.utilitiesService.setSelectedMenu(item);
     this.router.navigate(
-      ['/selectedMenu'], 
-      { queryParams: {name: item.name} }
-    );
-    console.log(item.name);
-    
+      ['/selectedMenu']
+    );    
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { UtilitiesService } from '../../utility.service';
 
 @Component({
   selector: 'app-toggle',
@@ -12,11 +13,19 @@ export class ToggleComponent implements OnInit {
 
   public toggle: boolean[] = [];
 
-  constructor() { }
+  constructor(
+    private utilitiesService: UtilitiesService
+  ) { }
 
   ngOnInit(): void {
     if (this.categories.length > 0) {
-      this.categories.forEach(val => val == 'Coffee' ? this.toggle.push(true) : this.toggle.push(false));
+      const selectedCategory = this.utilitiesService.getSelectedCategory() || null;
+
+      if (selectedCategory) {
+        this.categories.forEach(val => val == selectedCategory ? this.toggle.push(true) : this.toggle.push(false));
+      } else {
+        this.categories.forEach(val => val == 'Coffee' ? this.toggle.push(true) : this.toggle.push(false));
+      }
     }
   }
 
