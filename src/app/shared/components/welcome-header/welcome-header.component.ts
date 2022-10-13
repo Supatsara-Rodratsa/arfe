@@ -15,6 +15,8 @@ export class WelcomeHeaderComponent implements OnInit {
   @Input() isRanking = false;
   @Input() isArfeProfile= false;
   @Input() isArtWork = false;
+  @Input() isVoting= false;
+
 
   constructor() { }
 

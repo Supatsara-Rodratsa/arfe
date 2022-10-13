@@ -1,0 +1,35 @@
+.back {
+    position: absolute;
+    left: 0;
+    padding-left: 20px;
+    top: 0;
+    padding-top: 10px;
+  }
+  
+  #arrow {
+    background: url(src/assets/images/arrow-back-black.svg) no-repeat center;
+    background-size: 24px 24px;
+    cursor: pointer;
+  }
+  
+  .arrow-layout {
+    width: 24px;
+    height: 24px;
+  }
+
+/* .voting-container {
+    margin: 2rem 0rem;
+} */
+
+.voting-wrapper {
+    margin: 2rem 0rem;
+    text-align: center;
+}
+
+.voting-img {
+    margin-bottom: 1rem;
+ }
+
+.voting-btn {
+    bottom: 0;
+}

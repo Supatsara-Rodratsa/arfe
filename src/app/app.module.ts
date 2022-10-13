@@ -23,6 +23,7 @@ import { GalleryInfoComponent } from './landing-screen/components/gallery-info/g
 import { ShoppingCartComponent } from './landing-screen/components/shopping-cart/shopping-cart.component';
 import { OrderScreenComponent } from './landing-screen/components/order-screen/order-screen.component';
 import { UploadArtworkComponent } from './landing-screen/components/upload-artwork/upload-artwork.component';
+import { VotingScreenComponent } from './landing-screen/components/voting-screen/voting-screen.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,11 @@ import { UploadArtworkComponent } from './landing-screen/components/upload-artwo
     MenuItemComponent,
     MenuViewScreenComponent,
     UploadPhotoComponent, 
-    GalleryInfoComponent, ShoppingCartComponent, OrderScreenComponent, UploadArtworkComponent 
+    GalleryInfoComponent, 
+    ShoppingCartComponent, 
+    OrderScreenComponent, 
+    VotingScreenComponent,
+    UploadArtworkComponent
   ],
   imports: [
     BrowserModule,

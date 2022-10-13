@@ -1,0 +1,27 @@
+<div class="flex-col space-between">
+    <app-nav-bar [mainColor]="'#75D6D8'"></app-nav-bar>
+    <div class="landing-container voting-container">
+        <!-- <app-welcome-header [isVoting]="true"></app-welcome-header> -->
+        <div class="back" >
+            <div id="arrow" class="arrow-layout" (click)="utilitiesService.selectedIcon('gallery')"></div>
+        </div>
+     <div class="flex-col align-center voting-wrapper">
+            <img class="voting-img" width="60%" src="{{this.photo}}"/>
+            <div class="">
+                <p class="bold font-secondary-header">"HEAD"</p>
+                <p class="mg-0 italic font-regular">by Human <span class="bold">@human</span></p>
+                <p class="mg-0 font-small">50x30, acrylic on canvas</p>
+                <p class="flex font-regular"><img class="ranking-margin"src="assets/images/ranking-small.svg"/> <span class="bold">1,284 votes </span></p>
+                
+                <div class="flex-col align-center voting-btn">
+                 <button mat-stroked-button class="heart-button mg-right stroke-button adjust-button font-small light black-color"> 
+                    <img width="30px" class=""  src="assets/images/heart.svg"/>
+                   </button>
+                 <p class="mg-0 gray-color font-small">vote for this artwork</p>
+                </div>
+            </div> 
+        
+     </div>
+    </div>
+    <app-footer></app-footer>
+</div>
