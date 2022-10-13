@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output
 import { Menu } from 'src/app/landing-screen/components/all-menu-screen/all-menu.interface';
 import { Location } from '@angular/common';
 import { trigger, style, animate, transition, state } from '@angular/animations';
+import { UtilitiesService } from '../../utility.service';
 
 type PaneType = 'left' | 'right';
 @Component({
@@ -18,7 +19,10 @@ export class MenuDetailComponent implements OnInit {
   @Output() updateIndex = new EventEmitter<number>();
   @Input() activePane: PaneType = 'left';
 
-  constructor(private location: Location) {}
+  constructor(
+    private location: Location,
+    private utilitiesService: UtilitiesService
+  ) {}
 
   ngOnInit(): void {
   }
@@ -44,6 +48,12 @@ export class MenuDetailComponent implements OnInit {
       this.currentIndex--;
     }
     this.updateIndex.emit(this.currentIndex);    
+  }
+
+  addToCart() {
+    if (this.menu) {
+      this.utilitiesService.addCartItem(this.menu);
+    }
   }
 
 }

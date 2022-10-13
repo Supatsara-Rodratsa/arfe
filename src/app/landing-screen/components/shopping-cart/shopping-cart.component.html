@@ -1,0 +1,25 @@
+<div class="flex-col space-between">
+    <app-nav-bar [mainColor]="'black'"></app-nav-bar>
+    <div class="landing-container pad-0">
+        <div class="pad-20 pad-top-0">
+            <app-welcome-header [isShoppingCart]="true"></app-welcome-header>
+        </div>
+        <div class="flex-col">
+            <div *ngFor="let menu of items | keyvalue; let i = index">
+                <div class="border-top" [ngClass]="i == this.items.size-1 ? 'border-bottom':''">
+                    <app-shopping-list [selectedMenu]="menu.value[0]" [currentItem]="menu.value.length"></app-shopping-list>
+                </div>
+            </div>
+            <div class="gird-container menu-layout">
+                <div></div>
+                <div></div>
+                <div class="total bold">TOTAL  &#8364;{{total}}</div>
+            </div>
+            <div class="place-order flex center">
+                <button mat-raised-button class="button raised-button font-secondary-header bold mg-auto">place order</button>
+            </div>
+        </div>
+    </div> 
+    <app-footer [currentItem]="'menu'" (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
+</div>
+

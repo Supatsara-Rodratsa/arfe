@@ -5,7 +5,8 @@ export interface Menu {
     price: any,
     color: any,
     image?: string,
-    index: number
+    index: number,
+    price_no: number
 }
 
 export const iceCoffee: Menu[] = [
@@ -16,7 +17,8 @@ export const iceCoffee: Menu[] = [
         quantity: '300ml',
         ingredient: 'Espresso with milk, iced',
         color: '#CC8AFF',
-        image: 'assets/images/coffee/icedCoffee.png'
+        image: 'assets/images/coffee/icedCoffee.png',
+        price_no: 4
     },
     {
         index: 1,
@@ -25,7 +27,8 @@ export const iceCoffee: Menu[] = [
         quantity: '300ml',
         ingredient: 'Matcha with plant-based wilk, iced',
         color: '#CC8AFF',
-        image: 'assets/images/coffee/ice_matcha.png'
+        image: 'assets/images/coffee/ice_matcha.png',
+        price_no: 4.5
     },
     {
         index: 2,
@@ -34,7 +37,8 @@ export const iceCoffee: Menu[] = [
         quantity: '300ml',
         ingredient: 'Espresso blended with almound milk and creeme, iced',
         color: '#CC8AFF',
-        image: 'assets/images/coffee/frappucino.png'
+        image: 'assets/images/coffee/frappucino.png',
+        price_no: 4
     }
 ]
 
@@ -46,7 +50,8 @@ export const hotCoffee: Menu[] = [
         quantity: '250ml',
         ingredient: 'Espresso with milk (whole/plant-based)',
         color: '#CC8AFF',
-        image: 'assets/images/coffee/cappuccino.png'
+        image: 'assets/images/coffee/cappuccino.png',
+        price_no: 3
     },
     {
         index: 4,
@@ -55,7 +60,8 @@ export const hotCoffee: Menu[] = [
         quantity: '300ml',
         ingredient: 'Dark chocolate moca with cream',
         color: '#CC8AFF',
-        image: 'assets/images/coffee/moca.png'
+        image: 'assets/images/coffee/moca.png',
+        price_no: 3.9
     },
     {
         index: 5,
@@ -64,7 +70,8 @@ export const hotCoffee: Menu[] = [
         quantity: '250ml',
         ingredient: 'Our special in-house blend (ask barista for details)',
         color: '#CC8AFF',
-        image: 'assets/images/coffee/special_brew.png'
+        image: 'assets/images/coffee/special_brew.png',
+        price_no: 3.5
     }
 ]
 
@@ -76,7 +83,8 @@ export const coldDrink: Menu[] = [
         quantity: '300ml',
         ingredient: 'Orange/Apple/Cherry',
         color: '#FF8A9D',
-        image: 'assets/images/drink/juice.png'
+        image: 'assets/images/drink/juice.png',
+        price_no: 4
     },
     {
         index: 1,
@@ -85,7 +93,8 @@ export const coldDrink: Menu[] = [
         quantity: '80ml',
         ingredient: 'Ginger/Kale shots',
         color: '#FF8A9D',
-        image: 'assets/images/drink/health-shot.png'
+        image: 'assets/images/drink/health-shot.png',
+        price_no: 3
     },
     {
         index: 2,
@@ -94,7 +103,8 @@ export const coldDrink: Menu[] = [
         quantity: '350ml',
         ingredient: 'Strawberry & Banana with almound milk',
         color: '#FF8A9D',
-        image: 'assets/images/drink/smoothie.png'
+        image: 'assets/images/drink/smoothie.png',
+        price_no: 4.5
     }
 ]
 
@@ -106,7 +116,8 @@ export const hotDrink: Menu[] = [
         quantity: '300ml',
         ingredient: 'Black tea with spices served with milk',
         color: '#FF8A9D',
-        image: 'assets/images/drink/Chai-Latte.png'
+        image: 'assets/images/drink/Chai-Latte.png',
+        price_no: 4
     },
     {
         index: 4,
@@ -115,7 +126,8 @@ export const hotDrink: Menu[] = [
         quantity: '400ml',
         ingredient: 'Chamomile / Lavender / Rooibos / White ',
         color: '#FF8A9D',
-        image: 'assets/images/drink/turmeric.png'
+        image: 'assets/images/drink/turmeric.png',
+        price_no: 4.9
     },
     {
         index: 5,
@@ -124,7 +136,8 @@ export const hotDrink: Menu[] = [
         quantity: '280ml',
         ingredient: 'Dark Chocolate drink with oat milk',
         color: '#FF8A9D',
-        image: 'assets/images/drink/hot-chocolate.png'
+        image: 'assets/images/drink/hot-chocolate.png',
+        price_no: 3.5
     }
 ]
 
@@ -136,7 +149,8 @@ export const sweetCorner: Menu[] = [
         quantity: '230gr',
         ingredient: 'With salty tahini caramel',
         color: '#7AE1E3',
-        image: 'assets/images/snack/vegan.png'
+        image: 'assets/images/snack/vegan.png',
+        price_no: 4
     },
     {
         index: 1,
@@ -145,7 +159,8 @@ export const sweetCorner: Menu[] = [
         quantity: '200gr',
         ingredient: 'With raw dark chocolate paste',
         color: '#7AE1E3',
-        image: 'assets/images/snack/croissant.png'
+        image: 'assets/images/snack/croissant.png',
+        price_no: 3
     },
     {
         index: 2,
@@ -154,7 +169,8 @@ export const sweetCorner: Menu[] = [
         quantity: '300gr',
         ingredient: 'With a side of passion fruit puree',
         color: '#7AE1E3',
-        image: 'assets/images/snack/matcha-cheesecake.png'
+        image: 'assets/images/snack/matcha-cheesecake.png',
+        price_no: 3.9
     }
 ]
 
@@ -166,7 +182,8 @@ export const breakfast: Menu[] = [
         quantity: '350gr',
         ingredient: 'Comes with as poached egg ',
         color: '#7AE1E3',
-        image: 'assets/images/snack/avocado-toast.png'
+        image: 'assets/images/snack/avocado-toast.png',
+        price_no: 7
     },
     {
         index: 4,
@@ -175,7 +192,8 @@ export const breakfast: Menu[] = [
         quantity: '400gr',
         ingredient: 'With seasonal berries ',
         color: '#7AE1E3',
-        image: 'assets/images/snack/vegan-pancake.png'
+        image: 'assets/images/snack/vegan-pancake.png',
+        price_no: 7.9
     },
     {
         index: 5,
@@ -184,7 +202,8 @@ export const breakfast: Menu[] = [
         quantity: '390gr',
         ingredient: 'Grain bagel with salmon & cream cheese',
         color: '#7AE1E3',
-        image: 'assets/images/snack/salmon-bagal.png'
+        image: 'assets/images/snack/salmon-bagal.png',
+        price_no: 6.5
     }
 ]
 

@@ -18,6 +18,9 @@ import { RankingScreenComponent } from './landing-screen/components/ranking-scre
 import { ProfileScreenComponent } from './landing-screen/components/profile-screen/profile-screen.component';
 import { MenuViewScreenComponent } from './landing-screen/components/menu-view-screen/menu-view-screen.component';
 import { UploadPhotoComponent } from './landing-screen/components/upload-photo/upload-photo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { GalleryInfoComponent } from './landing-screen/components/gallery-info/gallery-info.component';
+import { ShoppingCartComponent } from './landing-screen/components/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -34,16 +37,20 @@ import { UploadPhotoComponent } from './landing-screen/components/upload-photo/u
     ProfileScreenComponent,
     MenuItemComponent,
     MenuViewScreenComponent,
-    UploadPhotoComponent,
+    UploadPhotoComponent, 
+    GalleryInfoComponent, ShoppingCartComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule.forRoot(),
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [GalleryInfoComponent]
 })
 export class AppModule { }
