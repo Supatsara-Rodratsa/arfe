@@ -187,3 +187,18 @@ body, html {
     margin-right: .4rem !important;
 }
 
+.text-center{
+    text-align: center !important ;
+}
+
+.line-grey {
+    display: block;
+    height: 10px;
+    border: 0;
+    border-top: 1px solid var(--gray-2);
+    margin: 1em 0;
+    padding: 0;
+    width: 100%;
+    opacity: 0.5;
+}
+
