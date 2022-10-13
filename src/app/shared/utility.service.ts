@@ -43,6 +43,10 @@ export class UtilitiesService {
       if (event == 'cart') {
         this.router.navigate(['shoppingCart']); 
       }
+
+      if (event == 'order') {
+        this.router.navigate(['yourOrder']); 
+      }
     }
 
     setImage(pic: FileReader) {
