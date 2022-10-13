@@ -30,7 +30,7 @@
 }
 
 .pad-20 {
-  padding: 0px 20px 30px 20px !important
+  padding: 30px 20px 30px 20px !important
 }
 
 .button-menu {
@@ -39,7 +39,7 @@
 
 @media only screen and (max-height: 680px) {
   .pad-20 {
-    padding: 0px 20px 10px 20px !important
+    padding: 10px 20px 10px 20px !important
   }
 }
 

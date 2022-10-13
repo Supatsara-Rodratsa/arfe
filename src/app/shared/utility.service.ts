@@ -12,6 +12,7 @@ export class UtilitiesService {
     private selectedMenu: Menu | undefined;
     private selectedCategories: Menu[] = [];
     private selectedCategory: string | undefined;
+    private cartItems: Menu[] = [];
 
     constructor(
         private router: Router
@@ -37,6 +38,10 @@ export class UtilitiesService {
       
       if (event == 'upload') {
         this.router.navigate(['arfraim'], { queryParams: params }); 
+      }
+
+      if (event == 'cart') {
+        this.router.navigate(['shoppingCart']); 
       }
     }
 
@@ -74,5 +79,13 @@ export class UtilitiesService {
 
     getSelectedCategory() {
       return this.selectedCategory;
+    }
+
+    addCartItem(item: Menu) {
+      this.cartItems.push(item);
+    }
+
+    getCartItem() {
+      return this.cartItems;
     }
 }

@@ -1,0 +1,22 @@
+<div class="shopping-cart-container">
+    <div class="flex-row space-between pad-20 align-center">
+        <div class="flex-row">
+            <div class="menu-picture flex center" [style.background-color]="selectedMenu?.color">
+                <img src="{{selectedMenu?.image}}">
+            </div>
+            <div class="flex-col pdr-20">
+                <div style="padding-bottom: 5px;" class="bold">
+                    {{selectedMenu?.name}}
+                </div>
+                <div>
+                    &#8364;{{selectedMenu?.price}}
+                </div>
+            </div>
+        </div>
+        <div class="cart-button flex-row align-center">
+            <div>-</div>
+            <div>{{currentItem}}</div>
+            <div>+</div>
+        </div>
+    </div>
+</div>

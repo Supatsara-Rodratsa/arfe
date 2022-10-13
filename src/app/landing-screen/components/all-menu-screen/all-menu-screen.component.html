@@ -1,5 +1,9 @@
 <div class="flex-col space-between">
     <app-nav-bar [mainColor]="color"></app-nav-bar>
+    <div class="count-item" *ngIf="getCurrentCartItem() != 0">{{getCurrentCartItem()}}</div>
+    <button class="fab" mat-fab color="primary" *ngIf="getCurrentCartItem() != 0" (click)="goToShoppingCart()">
+        <div id="fab-icon" class="fab-layout "></div>
+    </button>
     <div class="landing-container pad-0">
         <div class="flex-col">
             <div class="menu-layout">
@@ -8,7 +12,7 @@
             </div>
             <div *ngIf="isSelectedCoffee">
                 <div *ngFor="let coffee of coffeeHashMap | keyvalue; let i = index">
-                    <div  *ngFor="let item of coffee.value; let j = index">
+                    <div  *ngFor="let item of coffee.value; let j = index" [ngClass]="i == coffeeHashMap.size -1 && j == coffee.value.length-1 ? 'mgb' : ''">
                         <div class="font-mid-header bold menu-header menu-layout" [style.color]="item.color" *ngIf="j==0">{{coffee.key}}</div>
                         <app-menu-item [name]="item.name" [quantity]="item.quantity" [ingredient]="item.ingredient" [price]="item.price" (click)="selectedMenu(item)"></app-menu-item>
                     </div><br>
@@ -16,7 +20,7 @@
             </div>
             <div *ngIf="isSelectedDrink">
                 <div *ngFor="let coffee of drinkHashMap | keyvalue; let i = index">
-                    <div  *ngFor="let item of coffee.value; let j = index">
+                    <div  *ngFor="let item of coffee.value; let j = index"  [ngClass]="i == drinkHashMap.size -1 && j == coffee.value.length-1 ? 'mgb' : ''">
                         <div class="font-mid-header bold menu-header menu-layout" [style.color]="item.color" *ngIf="j==0">{{coffee.key}}</div>
                         <app-menu-item [name]="item.name" [quantity]="item.quantity" [ingredient]="item.ingredient" [price]="item.price" (click)="selectedMenu(item)"></app-menu-item>
                     </div><br>
@@ -24,7 +28,7 @@
             </div>
             <div *ngIf="isSelectedSnack">
                 <div *ngFor="let coffee of snackHashMap | keyvalue; let i = index">
-                    <div  *ngFor="let item of coffee.value; let j = index">
+                    <div  *ngFor="let item of coffee.value; let j = index"  [ngClass]="i == snackHashMap.size -1 && j == coffee.value.length-1 ? 'mgb' : ''">
                         <div class="font-mid-header bold menu-header menu-layout" [style.color]="item.color" *ngIf="j==0">{{coffee.key}}</div>
                         <app-menu-item [name]="item.name" [quantity]="item.quantity" [ingredient]="item.ingredient" [price]="item.price" (click)="selectedMenu(item)"></app-menu-item>
                     </div><br>
