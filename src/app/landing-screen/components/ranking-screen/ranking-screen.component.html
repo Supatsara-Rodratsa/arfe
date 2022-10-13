@@ -3,16 +3,52 @@
     <div class="landing-container">
         <app-welcome-header [isRanking]="true"></app-welcome-header>
     <div class="flex-col align-center">
-        <p class="font-mid-header bold">1</p>
-        <img class="ranking-img"  src="assets/images/paintings/painting1.jpg"/>
-        <div class="ranking-container margin-bottom flex-col">
-          <p class="font-mid-header bold margin-0">LOVE TO SEE YOU SMILE</p>
-          <p class="font-regular margin-0">by Stacy <span class="bold">@stacyxoxo</span></p>
-          <p class="font-small margin-0 margin-bottom">30x20, acrylic on canvas</p>
-          <p class="font-mid-header bold margin-0 margin-bottom">  <img class=""src="assets/images/ranking-small.svg"/> 1,284 votes</p>
-          <p class="ranking-trending font-mid-header bold margin-0">Your art is trending in the top 4%!</p>
+
+        <div class="ranking-personal">
+            <p class="font-mid-header bold margin-0"> <span class="ranking-trending">4ᵗʰ</span>  place</p>
+            <img class="ranking-personal-img" src="assets/images/paintings/painting1.jpg"/>
+              <p class="text-center font-secondary-header bold margin-0">Your art is trending in the <span class="ranking-trending"> top 4%! </span></p>
+              <p class="font-secondary-header bold margin-0 margin-bottom flex">  <img class="ranking-margin"src="assets/images/ranking-small.svg"/> <span class="ranking-trending">998 votes </span></p>
+        </div>
+        <div class="ranking-top">
+            <p class="font-mid-header bold">Current top 3</p>
+
+            <div class="flex top-item">
+                <p class="font-mid-header bold mg-0 ranking-trending">1</p>
+                <img class="top-img" src="assets/images/art9.jpg"/>
+                <div class="">
+                    <p class="bold mg-0">"HEAD"</p>
+                    <p class="mg-0 italic">by Human <span class="bold">@human</span></p>
+                    <p class="flex"><img class="ranking-margin"src="assets/images/ranking-small.svg"/> <span class="bold">1,284 votes </span></p>
+                </div>
+              
+            </div>
+            <div class="line-grey"></div>
+            <div class="flex top-item">
+                <p class="font-mid-header bold mg-0 ranking-trending">2</p>
+                <img class="top-img" src="assets/images/art1.jpg"/>
+                <div class="">
+                    <p class="bold mg-0">"Art"</p>
+                    <p class="mg-0 italic">by Artist <span class="bold">@artttist</span></p>
+                    <p class="flex"><img class="ranking-margin"src="assets/images/ranking-small.svg"/> <span class="bold">1,163 votes </span></p>
+                </div>
+            </div>
+            <div class="line-grey"></div>
+            <div class="flex top-item">
+                <p class="font-mid-header bold mg-0 ranking-trending">3</p>
+                <img class="top-img" src="assets/images/art8.jpg"/>
+                <div class="">
+                    <p class="bold mg-0">"Flowers"</p>
+                    <p class="mg-0 italic">by PlantFlower <span class="bold">@FlowerPlant</span></p>
+                    <p class="flex"><img class="ranking-margin"src="assets/images/ranking-small.svg"/> <span class="bold">1,048 votes </span></p>
+                </div>
+            </div>
+            <div class="line-grey"></div>
+            
         </div>
     </div>
+
+   
     </div> 
     <app-footer [currentItem]="'ranking'" (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
 </div>
