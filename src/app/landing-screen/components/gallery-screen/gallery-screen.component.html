@@ -5,7 +5,7 @@
         <div class="flex-col align-center">
             <div class="gallery-container">
                 <div *ngFor="let image of allArtWorks; let i = index">
-                    <img class="gallery-img" src="{{image}}" *ngIf="i < 12" />
+                    <img class="gallery-img" src="{{image}}" *ngIf="i < 12" (click)="voting(image)"/>
                 </div>
             </div>
             <div class="arfraim-img">

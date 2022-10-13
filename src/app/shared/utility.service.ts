@@ -13,6 +13,7 @@ export class UtilitiesService {
     private selectedCategories: Menu[] = [];
     private selectedCategory: string | undefined;
     private cartItems: Menu[] = [];
+    private voting: string = '';
 
     constructor(
         private router: Router
@@ -42,6 +43,10 @@ export class UtilitiesService {
 
       if (event == 'cart') {
         this.router.navigate(['shoppingCart']); 
+      }
+
+      if (event == 'voting') {
+        this.router.navigate(['voting']); 
       }
     }
 
@@ -87,5 +92,13 @@ export class UtilitiesService {
 
     getCartItem() {
       return this.cartItems;
+    }
+
+    setVotingImage(item: string) {
+      this.voting = item;
+    }
+
+    getVotingImage() {
+      return this.voting;
     }
 }

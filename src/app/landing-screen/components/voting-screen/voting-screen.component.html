@@ -3,12 +3,10 @@
     <div class="landing-container voting-container">
         <!-- <app-welcome-header [isVoting]="true"></app-welcome-header> -->
         <div class="back" >
-            <div id="arrow" class="arrow-layout"></div>
+            <div id="arrow" class="arrow-layout" (click)="utilitiesService.selectedIcon('gallery')"></div>
         </div>
      <div class="flex-col align-center voting-wrapper">
-
-      
-            <img class="voting-img" width="60%" src="assets/images/art9.jpg"/>
+            <img class="voting-img" width="60%" src="{{this.photo}}"/>
             <div class="">
                 <p class="bold font-secondary-header">"HEAD"</p>
                 <p class="mg-0 italic font-regular">by Human <span class="bold">@human</span></p>

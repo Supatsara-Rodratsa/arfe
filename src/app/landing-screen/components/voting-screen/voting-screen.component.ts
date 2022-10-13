@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilitiesService } from 'src/app/shared/utility.service';
 
 @Component({
   selector: 'app-voting-screen',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VotingScreenComponent implements OnInit {
 
-  constructor() { }
+  public photo: string = '';
+  constructor(
+    public utilitiesService: UtilitiesService
+  ) { }
 
   ngOnInit(): void {
+    this.photo = this.utilitiesService.getVotingImage();
   }
 
 }

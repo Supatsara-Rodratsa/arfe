@@ -68,4 +68,9 @@ export class GalleryScreenComponent implements OnInit {
   
     return array;
   };
+
+  voting(image: string) {
+    this.utilitiesService.setVotingImage(image);
+    this.utilitiesService.selectedIcon('voting');
+  }
 }
