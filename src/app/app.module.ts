@@ -22,6 +22,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { GalleryInfoComponent } from './landing-screen/components/gallery-info/gallery-info.component';
 import { ShoppingCartComponent } from './landing-screen/components/shopping-cart/shopping-cart.component';
 import { OrderScreenComponent } from './landing-screen/components/order-screen/order-screen.component';
+import { UploadArtworkComponent } from './landing-screen/components/upload-artwork/upload-artwork.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { OrderScreenComponent } from './landing-screen/components/order-screen/o
     MenuItemComponent,
     MenuViewScreenComponent,
     UploadPhotoComponent, 
-    GalleryInfoComponent, ShoppingCartComponent, OrderScreenComponent 
+    GalleryInfoComponent, ShoppingCartComponent, OrderScreenComponent, UploadArtworkComponent 
   ],
   imports: [
     BrowserModule,

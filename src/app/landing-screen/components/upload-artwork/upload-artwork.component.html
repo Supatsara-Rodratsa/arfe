@@ -1,0 +1,18 @@
+<div class="flex-col space-between">
+    <app-nav-bar [mainColor]="'#CC8AFF'"></app-nav-bar>
+    <div class="landing-container">
+        <app-welcome-header [isArtWork]="true"></app-welcome-header>
+        <div class="upload-artwork" (click)="fileUpload.click()" *ngIf="!showPhoto">
+            <div id="upload-icon" class="upload-layout"></div>
+            <input type="file" class="file-input"(change)="uploadPhoto($event)" #fileUpload>       
+        </div>
+        <div *ngIf="showPhoto" class="flex center pad-30 photo-height">
+            <img class="photo" src="{{getNewImage()}}" width="100%">
+        </div>
+        <div class="flex-row center mgb-50">
+            <button mat-stroked-button class="upload-button stroke-button button adjust-button font-secondary-header bold round-button" (click)="cancel()">cancel</button>
+            <button mat-stroked-button class="upload-button button font-secondary-header bold round-button black-button" (click)="upload()">upload</button>
+        </div>
+    </div> 
+    <app-footer (selectedItem)="this.utilitiesService.selectedIcon($event)"></app-footer>
+</div>

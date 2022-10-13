@@ -1,0 +1,43 @@
+.upload-artwork {
+    border: 4px solid #000000;
+    border-radius: 40px;
+    padding: 130px 90px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    cursor: pointer;
+}
+
+#upload-icon {
+    background: url(src/assets/images/upload.svg) no-repeat center;
+    background-size: 40px 40px;
+}
+
+.upload-layout {
+    width: 40px;
+    height: 40px;
+}
+
+.upload-button {
+    width: 135px;
+    /* border: 2px solid; */
+  }
+
+  .file-input {
+    display: none;
+    cursor: pointer;
+  }
+
+  .photo {
+    max-height: 308px;
+    object-fit: cover;
+  }
+  
+  .pad-30 {
+    padding: 30px;
+  }
+
+  .photo-height {
+    height: 308px;
+  }

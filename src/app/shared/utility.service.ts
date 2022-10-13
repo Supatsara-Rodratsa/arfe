@@ -43,6 +43,14 @@ export class UtilitiesService {
       if (event == 'cart') {
         this.router.navigate(['shoppingCart']); 
       }
+
+      if (event == 'order') {
+        this.router.navigate(['yourOrder']); 
+      }
+
+      if (event == 'artwork') {
+        this.router.navigate(['uploadArtwork']); 
+      }
     }
 
     setImage(pic: FileReader) {
@@ -87,5 +95,9 @@ export class UtilitiesService {
 
     getCartItem() {
       return this.cartItems;
+    }
+
+    clearItems() {
+      this.cartItems = [];
     }
 }
