@@ -1,3 +1,17 @@
 .ranking-img {
     width: 70%;
 }
+
+.ranking-container {
+    margin-top: 2rem;
+}
+
+.margin-bottom {
+    margin-bottom: 2rem;
+}
+
+.ranking-trending {
+    color: #0D99FF;
+    font-size: 1.4rem;
+    text-align: center;
+}
