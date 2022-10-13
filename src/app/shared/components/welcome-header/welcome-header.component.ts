@@ -14,6 +14,8 @@ export class WelcomeHeaderComponent implements OnInit {
   @Input() isCard = false;
   @Input() isRanking = false;
   @Input() isArfeProfile= false;
+  @Input() isVoting= false;
+
 
   constructor() { }
 

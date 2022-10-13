@@ -9,6 +9,7 @@ import { ProfileScreenComponent } from './landing-screen/components/profile-scre
 import { RankingScreenComponent } from './landing-screen/components/ranking-screen/ranking-screen.component';
 import { ShoppingCartComponent } from './landing-screen/components/shopping-cart/shopping-cart.component';
 import { UploadPhotoComponent } from './landing-screen/components/upload-photo/upload-photo.component';
+import { VotingScreenComponent } from './landing-screen/components/voting-screen/voting-screen.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 
 const routes: Routes = [
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'shoppingCart',
     component: ShoppingCartComponent
+  },
+  {
+    path: 'voting',
+    component: VotingScreenComponent
   },
   { 
     path: '', redirectTo: 'gallery', pathMatch: 'full' 
