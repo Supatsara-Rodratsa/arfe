@@ -32,8 +32,9 @@ export class LoginScreenComponent implements OnInit {
   }
 
   navigateToMainScreen() {
+    this.form.markAllAsTouched();
     if (this.form.invalid) {
-      console.log('dsdasds');
+      console.log('invalid');
       
     } else {
       this.router.navigate(['gallery']);
