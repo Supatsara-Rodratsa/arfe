@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, animate, transition, state } from '@angular/animations';
 import { Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login-screen',
@@ -18,6 +19,11 @@ import { Router } from '@angular/router';
 })
 export class LoginScreenComponent implements OnInit {
 
+  public form: FormGroup = new FormGroup({
+    email: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required])
+  });
+
   constructor(
     private router: Router
   ) {}
@@ -26,7 +32,13 @@ export class LoginScreenComponent implements OnInit {
   }
 
   navigateToMainScreen() {
-    this.router.navigate(['gallery']);
+    if (this.form.invalid) {
+      console.log('dsdasds');
+      
+    } else {
+      this.router.navigate(['gallery']);
+    }
+   
   }
 
 }

@@ -24,6 +24,8 @@ import { ShoppingCartComponent } from './landing-screen/components/shopping-cart
 import { OrderScreenComponent } from './landing-screen/components/order-screen/order-screen.component';
 import { UploadArtworkComponent } from './landing-screen/components/upload-artwork/upload-artwork.component';
 import { VotingScreenComponent } from './landing-screen/components/voting-screen/voting-screen.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { VotingScreenComponent } from './landing-screen/components/voting-screen
     SharedModule.forRoot(),
     BrowserAnimationsModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
   ],

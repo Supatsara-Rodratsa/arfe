@@ -91,3 +91,14 @@ input {
 .gird-2 {
     display: grid;
 }
+
+.error {
+    border: 1px solid red;
+}
+
+.msg-error {
+    font-size: 12px;
+    margin-top: 5px;
+    color: red;
+    margin-left: 5px;
+}

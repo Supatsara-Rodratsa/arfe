@@ -7,10 +7,13 @@
             <div class="font-secondary-header black-color bold flex align-center adjust-height">
                 Create your account
             </div>
-            <div class="gird-2">
-                <input type="email" id="email" placeholder="Enter Email" autocomplete="off" required><br>
-                <input type="password" id="password" placeholder="Enter Password" autocomplete="off" required>
-            </div>
+            <form class="gird-2" [formGroup]="form">
+                <input type="email" formControlName="email"  id="email" placeholder="Enter Email" autocomplete="off" [ngClass]="form.get('email')?.invalid&& form.get('email')?.touched ? 'error':''" required>
+                <span *ngIf="form.get('email')?.invalid&& form.get('email')?.touched" class="msg-error">Please fill the form</span>
+                <br>
+                <input type="password" formControlName="password"  id="password" placeholder="Enter Password" autocomplete="off" [ngClass]="form.get('password')?.invalid && form.get('password')?.touched ? 'error':''" required>
+                <span *ngIf="form.get('password')?.invalid && form.get('password')?.touched" class="msg-error">Please fill the form</span>
+            </form>
             <div class="recover-password light-gray-color semi-bold font-small">
                 Recover Password ?
             </div>
