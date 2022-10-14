@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { UtilitiesService } from '../../utility.service';
 
 @Component({
   selector: 'app-welcome-header',
@@ -16,11 +17,15 @@ export class WelcomeHeaderComponent implements OnInit {
   @Input() isArfeProfile= false;
   @Input() isArtWork = false;
   @Input() isVoting= false;
+  public name: string = '';
 
+  constructor(
+    private utilitiesService: UtilitiesService
 
-  constructor() { }
+  ) { }
 
   ngOnInit(): void {
+    this.name = this.utilitiesService.getName();
   }
 
 }

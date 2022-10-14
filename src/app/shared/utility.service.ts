@@ -14,6 +14,7 @@ export class UtilitiesService {
     private selectedCategory: string | undefined;
     private cartItems: Menu[] = [];
     private voting: string = '';
+    private name: string = '';
 
     constructor(
         private router: Router
@@ -111,5 +112,13 @@ export class UtilitiesService {
 
     getVotingImage() {
       return this.voting;
+    }
+    
+    setName(item: string) {
+      this.name = item;
+    }
+
+    getName() {
+      return this.name;
     }
 }

@@ -13,9 +13,10 @@ export class NavBarComponent implements OnInit {
   }
   @Input() background = null;
 
-  public color: any | undefined
+  public color: any | undefined;
+  public name: string = '';
   constructor(
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit(): void {

@@ -102,3 +102,9 @@ input {
     color: red;
     margin-left: 5px;
 }
+
+.login {
+    text-decoration: underline;
+    text-align: center;
+    cursor: pointer;
+}
